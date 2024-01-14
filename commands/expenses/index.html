@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(219, 218, 218);
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+            margin: 5px;
+        }
+
+        .item {
+            width: 370px;
+            height: 250px;
+            background-color: white;
+            margin: 2px;
+            border-radius: 7px;
+            padding: 5px;
+        }
+
+        textarea {
+            border: none;
+            padding-top: 5px;
+            font-size: 14px;
+            overflow-y: hidden;
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+</body>
+
+</html>
+
+
+
+<script>
+    let data = [
+        {
+            user: '100015174306961',
+            description: 'ghi chú này dùng để xin chào',
+            id: 1,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'này hôm kia chúng ta đí ddaaua asl;dka;lsdal;sdka;lsdklasd asd klskd lsdk lsdksl dksl ks',
+            id: 2,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào 123 askdka123 ádjha',
+            id: 3,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào 123 13n1j2312 31j23n1j2n3j12n3j1231 3n12j3n12j3 123n12n3j123 12n3j12n31 12n3n12j31 12n312j3n1',
+            id: 4,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào 123 13n1j2312 31j23n1j2n3j12n3j1231 3n12j3n12j3 123n12n3j123 12n3j12n31 12n3n12j31 12n312j3n1',
+            id: 5,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào 123 13n1j2312 31j23n1j2n3j12n3j1231 3n12j3n12j3 123n12n3j123 12n3j12n31 12n3n12j31 12n312j3n1',
+            id: 6,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào 123 13n1j2312 31j23n1j2n3j12n3j1231 3n12j3n12j3 123n12n3j123 12n3j12n31 12n3n12j31 12n312j3n1',
+            id: 7,
+            date: '14012024',
+            __v: 0
+        },
+        {
+            user: '100015174306961',
+            description: 'xin chào \n' +
+                'chúng tôi đến từ \n' +
+                'ủa alo\n' +
+                '1 3n12j3n12j3 123n12n3j123 12n3j12n31 12n3n12j31 12n312j3n1',
+            id: 8,
+            date: '14012024',
+            __v: 0
+        }
+    ]
+
+    const mainElement = document.getElementById('main');
+    console.log(data)
+    for (let i = 0; i < data.length; i++) {
+        mainElement.insertAdjacentHTML('beforeend', `<div class="item">
+                                                        <div style="display: flex;">
+                                                            <h5>📅  ${data[i].date}</h5>
+                                                            <span style="margin-left: 10px;">ID: ${data[i].id}</span>
+                                                        </div>
+                                                        <textarea> ${data[i].description}</textarea>
+                                                    </div>`);
+    }
+</script>
