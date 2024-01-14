@@ -1,6 +1,4 @@
 const fs = require('fs').promises;
-const { createReadStream } = require('fs');
-// const nodeHtmlToImage = require('node-html-to-image');
 
 module.exports = {
     name: 'help',
